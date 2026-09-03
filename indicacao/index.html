@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Indique um imóvel e ganhe | Jota Corretor</title>
+<meta name="description" content="Indique imóveis para alugar ao Jota Corretor e ganhe R$ 100 por imóvel aprovado, mais 10% do valor do primeiro aluguel quando ele for alugado.">
+<meta name="theme-color" content="#111111">
+<style>
+:root{
+  --ink:#111111;
+  --ink-2:#222222;
+  --green:#07563b;
+  --green-dark:#043d2a;
+  --gold:#d8a63c;
+  --gold-2:#f0c86b;
+  --cream:#f7f4ec;
+  --paper:#fffdf9;
+  --muted:#666660;
+  --line:#e8e4d9;
+  --white:#fff;
+  --shadow:0 24px 70px rgba(17,17,17,.11);
+  --radius:28px;
+  --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.45}
+a{text-decoration:none;color:inherit}img{display:block;max-width:100%}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+.topbar{background:var(--ink);color:#fff;text-align:center;font-size:13px;font-weight:700;padding:9px 12px;letter-spacing:.01em}
+header{position:sticky;top:0;z-index:40;background:rgba(255,253,249,.92);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.logo{width:185px;max-height:48px;object-fit:contain;object-position:left center}
+.nav-links{display:flex;align-items:center;gap:22px;font-size:14px;font-weight:800}.nav-links a{color:#3b3b37}.nav-cta{background:var(--green-dark);color:#fff!important;padding:13px 19px;border-radius:999px;box-shadow:0 10px 24px rgba(4,61,42,.28);border:2px solid var(--green-dark)}.nav-cta:hover{background:#032f20;border-color:#032f20}
+.hero{overflow:hidden;background:
+ radial-gradient(circle at 84% 24%,rgba(216,166,60,.22),transparent 19%),
+ radial-gradient(circle at 8% 100%,rgba(18,107,79,.11),transparent 30%),
+ linear-gradient(180deg,#fffdf9 0%,#f8f5eb 100%);padding:58px 0 36px}
+.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:32px}
+.badge{display:inline-flex;align-items:center;gap:8px;background:#fff;border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.1em;color:var(--green);box-shadow:0 8px 22px rgba(17,17,17,.05)}
+.badge i{width:8px;height:8px;border-radius:50%;background:var(--gold);display:block}
+h1{font-size:clamp(45px,6vw,78px);line-height:.96;letter-spacing:-.055em;margin:18px 0 22px;max-width:710px}
+h1 .green{color:var(--green)}
+.lead{font-size:21px;color:#44443f;max-width:625px;margin:0 0 26px}
+.lead b{color:var(--ink)}
+.cta-row{display:flex;gap:12px;flex-wrap:wrap}.btn{display:inline-flex;align-items:center;justify-content:center;min-height:56px;padding:0 24px;border-radius:999px;font-weight:900;transition:.2s ease}.btn:hover{transform:translateY(-2px)}
+.btn-main{background:var(--green-dark);color:#fff;border:2px solid var(--green-dark);box-shadow:0 16px 32px rgba(4,61,42,.28)}.btn-main:hover{background:#032f20;border-color:#032f20}.btn-ghost{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.trust{display:flex;gap:20px;flex-wrap:wrap;margin-top:22px;color:#666660;font-size:13px;font-weight:700}.trust span{display:inline-flex;gap:7px;align-items:center}.trust b{color:var(--green)}
+.hero-visual{position:relative}.hero-visual .frame{border-radius:34px;background:#fff;border:1px solid var(--line);box-shadow:var(--shadow);padding:10px;overflow:hidden;position:relative}.hero-visual img{width:100%;border-radius:27px;aspect-ratio:1.17/1;object-fit:contain;background:#fff}
+.money-card{position:absolute;left:-26px;bottom:30px;background:#fff;border:1px solid var(--line);border-radius:20px;box-shadow:var(--shadow);padding:16px 18px;min-width:205px}.money-card small{font-size:11px;color:var(--muted);font-weight:800;text-transform:uppercase;letter-spacing:.09em}.money-card strong{display:block;font-size:28px;line-height:1.05;margin:5px 0 3px;color:var(--green)}.money-card span{font-size:12px;color:var(--muted)}
+.strip{padding:0 0 32px}.strip-inner{background:var(--ink);color:#fff;border-radius:24px;padding:22px 26px;display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:20px}.strip strong{font-size:18px}.strip small{color:#bbb9b1}.strip-tag{background:var(--gold);color:var(--ink);padding:9px 12px;border-radius:999px;font-size:12px;font-weight:900}
+.section{padding:84px 0}.section.alt{background:#f7f4ec;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.kicker{color:var(--green);font-size:12px;font-weight:950;text-transform:uppercase;letter-spacing:.14em}.section h2{font-size:clamp(35px,5vw,58px);line-height:1.02;letter-spacing:-.045em;margin:8px 0 15px}.section-intro{font-size:18px;color:var(--muted);max-width:720px;margin:0}
+.rewards{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:34px}.reward{background:#fff;border:1px solid var(--line);border-radius:26px;padding:28px;position:relative;overflow:hidden;box-shadow:0 14px 40px rgba(17,17,17,.05)}.reward:after{content:"";position:absolute;right:-46px;top:-50px;width:160px;height:160px;border-radius:50%;background:rgba(216,166,60,.12)}.reward .label{font-size:11px;font-weight:950;letter-spacing:.12em;text-transform:uppercase;color:var(--green)}.reward h3{font-size:26px;margin:9px 0 8px}.reward p{color:var(--muted);margin:0;max-width:500px}.reward .value{font-size:34px;font-weight:950;margin-top:19px;color:var(--green)}.reward .note{font-size:12px;color:#8c8c84;margin-top:3px}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin-top:34px}.step{background:#fff;border:1px solid var(--line);border-radius:23px;padding:24px}.num{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--ink);color:#fff;font-weight:950;margin-bottom:18px}.step h3{margin:0 0 7px;font-size:18px}.step p{margin:0;color:var(--muted);font-size:15px}
+.split{display:grid;grid-template-columns:.9fr 1.1fr;gap:44px;align-items:center}.benefits{display:grid;grid-template-columns:repeat(2,1fr);gap:13px;margin-top:26px}.benefit{padding:19px;border:1px solid var(--line);border-radius:20px;background:#fff}.benefit strong{display:block;margin-bottom:5px}.benefit span{font-size:14px;color:var(--muted)}
+.example{background:var(--green-dark);color:#fff;border-radius:30px;padding:34px;box-shadow:var(--shadow)}.example .eyebrow{color:var(--gold-2);font-weight:900;font-size:12px;text-transform:uppercase;letter-spacing:.1em}.example h3{font-size:34px;line-height:1.04;letter-spacing:-.035em;margin:8px 0 22px}.example .line{display:flex;justify-content:space-between;gap:20px;padding:15px 0;border-bottom:1px solid rgba(255,255,255,.12)}.example .line:last-child{border-bottom:0}.example .line span{color:rgba(255,255,255,.67)}.example .line b{font-size:20px;color:#fff}.example .emph{font-size:34px;color:var(--gold-2);font-weight:950}
+.faq{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:30px}details{background:#fff;border:1px solid var(--line);border-radius:18px;padding:18px 20px}summary{cursor:pointer;font-weight:900}details p{color:var(--muted);font-size:14px;margin:11px 0 0}
+.final{padding:28px 0 86px}.final-box{background:linear-gradient(135deg,var(--ink),#1d1d1b);color:#fff;border-radius:32px;padding:50px;display:grid;grid-template-columns:1fr auto;gap:28px;align-items:center}.final-box h2{font-size:clamp(34px,5vw,52px);line-height:1;margin:0 0 12px;letter-spacing:-.045em}.final-box p{margin:0;color:rgba(255,255,255,.78);font-size:17px;max-width:650px}.final-box .btn{background:#f1bd3f;color:#111;border:2px solid #f1bd3f;box-shadow:0 14px 30px rgba(241,189,63,.22)}.final-box .btn:hover{background:#ffd66e;border-color:#ffd66e}
+footer{background:#0a0a09;color:#fff;padding:35px 0}.foot{display:flex;justify-content:space-between;gap:25px;align-items:flex-start}.foot small{color:rgba(255,255,255,.55)}.foot a{color:#fff}.copy{margin-top:24px;padding-top:18px;border-top:1px solid rgba(255,255,255,.1);font-size:12px;color:rgba(255,255,255,.45)}
+.whatsapp{position:fixed;right:20px;bottom:20px;width:60px;height:60px;border-radius:50%;display:grid;place-items:center;background:#25D366;color:#fff;box-shadow:0 18px 38px rgba(37,211,102,.3);z-index:50;border:3px solid #fff}.whatsapp svg{width:31px;height:31px;fill:currentColor}
+@media(max-width:920px){.hero-grid,.split,.final-box{grid-template-columns:1fr}.hero-visual{max-width:720px;margin:0 auto}.money-card{left:12px}.steps{grid-template-columns:1fr 1fr}.rewards{grid-template-columns:1fr}.strip-inner{grid-template-columns:1fr}.strip-tag{justify-self:start}}
+@media(max-width:640px){.container{width:min(100% - 24px,var(--max))}.topbar{font-size:11px;padding:8px 8px}.nav{min-height:68px}.logo{width:155px}.nav-links a:not(.nav-cta){display:none}.nav-cta{font-size:12px;padding:11px 14px}.hero{padding-top:40px}.lead{font-size:18px}.btn{width:100%}.trust{gap:10px}.section{padding:62px 0}.steps,.benefits,.faq{grid-template-columns:1fr}.example{padding:25px}.final{padding-bottom:65px}.final-box{padding:32px 24px}.foot{flex-direction:column}.money-card{position:relative;left:auto;bottom:auto;margin:-28px 12px 0;z-index:2}.hero-visual .frame{padding:7px}}
+</style>
+</head>
+<body>
+<div class="topbar">CONHECE UM IMÓVEL PARA ALUGAR? <b>GANHE R$ 100 + 10% DO PRIMEIRO ALUGUEL.</b></div>
+<header>
+  <div class="container nav">
+    <a href="https://jotacorretor.com/" aria-label="Jota Corretor"><img class="logo" src="https://jotacorretor.com/storage/logo/jonathan-logo-preta.png" alt="Jota Corretor"></a>
+    <div class="nav-links"><a href="#como-funciona">Como funciona</a><a class="nav-cta" href="https://wa.me/5585997489242?text=Ol%C3%A1%20Jota!%20Quero%20indicar%20um%20im%C3%B3vel%20e%20saber%20como%20funciona%20a%20bonifica%C3%A7%C3%A3o.">Quero indicar</a></div>
+  </div>
+</header>
+<main>
+<section class="hero">
+ <div class="container hero-grid">
+  <div>
+   <div class="badge"><i></i> Programa de indicação Jota</div>
+   <h1>Ganhe dinheiro <span class="green">indicando imóveis.</span></h1>
+   <p class="lead">Indique um imóvel para o Jota e ganhe <b>R$ 100 quando ele for aprovado</b>. Se o imóvel for alugado, você recebe ainda <b>10% do valor do primeiro aluguel.</b></p>
+   <div class="cta-row"><a class="btn btn-main" href="https://wa.me/5585997489242?text=Ol%C3%A1%20Jota!%20Tenho%20um%20im%C3%B3vel%20para%20indicar.">💰 Quero ganhar indicando</a><a class="btn btn-ghost" href="#como-funciona">Entenda como funciona</a></div>
+   <div class="trust"><span>✓ Indicação pelo WhatsApp</span><span>✓ R$ 100 após aprovação</span><span>✓ Mais 10% se alugar</span></div>
+  </div>
+  <div class="hero-visual">
+   <div class="frame"><img src="assets/hero-indica.png" alt="Pessoa recebendo uma recompensa por indicar um imóvel para alugar"></div>
+   <div class="money-card"><small>Você pode ganhar</small><strong>R$ 100 + 10%</strong><span>do primeiro aluguel*</span></div>
+  </div>
+ </div>
+</section>
+<section class="strip"><div class="container strip-inner"><div><strong>Você conhece o imóvel. O Jota faz o resto.</strong><br><small>Uma indicação pode virar uma oportunidade para você.</small></div><div></div><div class="strip-tag">INDIQUE PELO WHATSAPP</div></div></section>
+<section class="section alt">
+ <div class="container">
+  <div class="kicker">Quanto você pode ganhar?</div>
+  <h2>Transforme contatos em oportunidades — e oportunidades em dinheiro.</h2>
+  <p class="section-intro">O pagamento acontece em dois momentos diferentes. Você não precisa anunciar, visitar ou negociar: basta indicar o proprietário e o Jota conduz todo o processo.</p>
+  <div class="rewards">
+   <article class="reward"><div class="label">1º pagamento</div><h3>Imóvel aprovado</h3><p>Depois que o Jota falar com o proprietário, analisar o imóvel e aprová-lo para entrar na carteira de locação, você recebe a primeira recompensa.</p><div class="value">R$ 100</div><div class="note">Pago uma vez por imóvel aprovado, conforme os critérios do programa.</div></article>
+   <article class="reward"><div class="label">2º pagamento</div><h3>Imóvel alugado</h3><p>Se o imóvel indicado for alugado pelo Jota, você recebe uma recompensa adicional calculada sobre o valor do primeiro aluguel.</p><div class="value">+ 10% do aluguel</div><div class="note">Exemplo: primeiro aluguel de R$ 3.500 = mais R$ 350 para você.</div></article>
+  </div>
+ </div>
+</section>
+<section class="section" id="como-funciona">
+ <div class="container">
+  <div class="kicker">É simples</div><h2>Como funciona</h2><p class="section-intro">Você não precisa ser corretor. Basta conhecer alguém com um imóvel para alugar e ter autorização para compartilhar o contato.</p>
+  <div class="steps">
+   <article class="step"><div class="num">1</div><h3>Você indica o imóvel</h3><p>Casa, apartamento, sala ou outro imóvel disponível para aluguel.</p></article>
+   <article class="step"><div class="num">2</div><h3>Chama o Jota</h3><p>Envie pelo WhatsApp o nome do proprietário, telefone e o que souber sobre o imóvel.</p></article>
+   <article class="step"><div class="num">3</div><h3>O Jota entra em ação</h3><p>Faz o contato, entende o imóvel, conversa sobre a oportunidade e conduz a negociação.</p></article>
+   <article class="step"><div class="num">4</div><h3>Você recebe</h3><p>R$ 100 após a aprovação do imóvel e mais 10% do primeiro aluguel se ele for alugado.</p></article>
+  </div>
+ </div>
+</section>
+<section class="section alt">
+ <div class="container split">
+  <div><div class="kicker">Por que participar?</div><h2>Você pode indicar sem virar corretor.</h2><p class="section-intro">Seu papel é abrir a porta certa. A análise, a divulgação e a negociação ficam com o Jota.</p><div class="benefits"><div class="benefit"><strong>Você só indica</strong><span>Não precisa anunciar, fotografar ou negociar.</span></div><div class="benefit"><strong>Fale com o Jota</strong><span>O contato acontece direto pelo WhatsApp.</span></div><div class="benefit"><strong>Pagamento em 2 etapas</strong><span>Uma recompensa na aprovação e outra se o imóvel alugar.</span></div><div class="benefit"><strong>Mais de uma indicação</strong><span>Quanto mais imóveis aprovados, maior seu potencial de ganho.</span></div></div></div>
+  <div class="example"><div class="eyebrow">Exemplo de ganho</div><h3>Imóvel aprovado e alugado por R$ 3.500.</h3><div class="line"><span>Imóvel aprovado</span><b>R$ 100</b></div><div class="line"><span>10% do primeiro aluguel</span><b>R$ 350</b></div><div class="line"><span>Total recebido</span><b class="emph">R$ 450</b></div><div style="margin-top:14px;color:rgba(255,255,255,.72);font-size:12px">* Os R$ 100 dependem da aprovação do imóvel. Os 10% são pagos somente se o imóvel for efetivamente alugado pelo Jota.</div></div>
+ </div>
+</section>
+<section class="section">
+ <div class="container"><div class="kicker">Dúvidas</div><h2>Antes de indicar</h2><div class="faq">
+  <details><summary>Preciso ser corretor de imóveis?</summary><p>Não. A proposta é para pessoas que conhecem oportunidades e querem apresentá-las ao Jota.</p></details>
+  <details><summary>Posso indicar um imóvel de amigo ou familiar?</summary><p>Sim, desde que o proprietário esteja ciente da indicação e autorize o contato.</p></details>
+  <details><summary>Preciso saber o preço do imóvel?</summary><p>Não. Envie as informações que tiver. O Jota conversa com o proprietário para entender os detalhes.</p></details>
+  <details><summary>Quanto eu vou receber?</summary><p>R$ 100 por imóvel aprovado para a carteira de locação. Se ele for alugado pelo Jota, você recebe também 10% do valor do primeiro aluguel.</p></details>
+  <details><summary>Quando recebo os R$ 100?</summary><p>Depois que o proprietário autorizar a captação e o imóvel for analisado e aprovado conforme os critérios do programa.</p></details>
+  <details><summary>E quando recebo os 10%?</summary><p>Somente após o imóvel indicado ser efetivamente alugado pelo Jota. O percentual é calculado sobre o valor do primeiro aluguel.</p></details>
+ </div></div>
+</section>
+<section class="final"><div class="container"><div class="final-box"><div><h2>Tem um imóvel para alugar em mente?</h2><p>Chame o Jota no WhatsApp. Você pode ganhar R$ 100 pela aprovação e mais 10% do primeiro aluguel quando o imóvel for alugado.</p></div><a class="btn" href="https://wa.me/5585997489242?text=Ol%C3%A1%20Jota!%20Quero%20indicar%20um%20im%C3%B3vel%20para%20alugar%20e%20participar%20do%20programa.">INDICAR AGORA →</a></div></div></section>
+</main>
+<footer><div class="container"><div class="foot"><div><img class="logo" src="https://jotacorretor.com/storage/logo/jonathan-logo-preta.png" alt="Jota Corretor" style="filter:invert(1);width:160px"><small style="display:block;margin-top:9px">Jota Corretor de Imóveis • Fortaleza, Ceará</small></div><div style="text-align:right"><small>WhatsApp</small><br><a href="https://wa.me/5585997489242">(85) 9 9748-9242</a><br><small>jotacorretor.com</small></div></div><div class="copy">© 2026 Jota Corretor de Imóveis. Programa de indicação sujeito às condições comerciais informadas no atendimento.</div></div></footer>
+<a class="whatsapp" href="https://wa.me/5585997489242?text=Ol%C3%A1%20Jota!%20Tenho%20um%20im%C3%B3vel%20para%20indicar." aria-label="Indicar imóvel pelo WhatsApp"><svg viewBox="0 0 32 32"><path d="M16 2.5C8.54 2.5 2.5 8.54 2.5 16c0 2.38.63 4.61 1.74 6.54L2.2 29.8l7.42-1.95A13.43 13.43 0 0 0 16 29.5c7.46 0 13.5-6.04 13.5-13.5S23.46 2.5 16 2.5Zm0 24.64a11.1 11.1 0 0 1-5.66-1.55l-.4-.24-4.4 1.16 1.18-4.28-.26-.42A11.03 11.03 0 1 1 16 27.14Zm6.1-8.24c-.33-.17-1.94-.96-2.24-1.07-.3-.11-.52-.17-.74.17-.22.33-.85 1.07-1.04 1.29-.19.22-.38.25-.71.08-.33-.17-1.39-.51-2.65-1.62-.98-.87-1.64-1.95-1.83-2.28-.19-.33-.02-.51.14-.68.15-.15.33-.38.49-.57.16-.19.22-.33.33-.55.11-.22.05-.41-.03-.57-.08-.17-.74-1.78-1.01-2.44-.27-.65-.54-.56-.74-.57h-.63c-.22 0-.57.08-.87.41-.3.33-1.14 1.11-1.14 2.71s1.17 3.14 1.34 3.36c.16.22 2.31 3.53 5.6 4.95.78.34 1.39.54 1.86.69.78.25 1.49.22 2.05.13.63-.09 1.94-.79 2.21-1.55.27-.76.27-1.41.19-1.55-.08-.14-.3-.22-.63-.39Z"/></svg></a>
+</body></html>
